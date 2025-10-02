@@ -3,38 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#work">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-    <section id="home" class="home container">
-        <div class="row d-flex align-items-center flex-md-row flex-column-reverse">
-            <div class="col-12 col-md-8">
-                <h3 class="fw-semibold">Hi! I am</h3>
-                <h1 class="fw-bold">Bianco Akbar Firdhaus</h1>
-                <p>I am Front-End Web Developer based in Indonesia</p>
-                <a class="btn button" href="images/Resume.pdf" download>Resume</a>
-            </div>
-            <div class="col-12 col-md-4 d-flex justify-content-md-end justify-content-center">
-                <img src="images/profile.png" alt="Profile">
-            </div>
+    <nav class="navbar">
+        <a href="#home" class="navbar-logo">Bianco Akbar Firdhaus</a>
+        <div class="navbar-nav">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#project">Project</a>
+            <a href="#contact">Contact</a>
         </div>
-        <a href="#about" class="text-decoration-none w-100 d-flex align-items-center justify-content-center flex-column mt-5">
-            <div class="text-light">More Info</div>
-            <img id="arrow" class="mt-2" src="images/arrow-down.svg" alt="arrow icon">
-        </a>
+    </nav>
+
+    <section id="home" class="home">
+        <div class="home-text">
+            <h2>Hi! I am</h2>
+            <h1>Bianco Akbar Firdhaus</h1>
+            <p class="subtitle">Front-End Developer</p>
+            <p class="description">I am passionate about creating interactive and user-friendly web applications.</p>
+            <a href="images/Resume.pdf" class="button">Resume</a>
+        </div>
+        <div class="home-img">
+            <img src="images/profile.png" alt="profile picture">
+        </div>
     </section>
-    <section id="about" class="about container">
-        <p>Currently pursuing a degree in Informatics Engineering at Universitas Indraprasta PGRI, I am a professional transitioning into Front-End Web Development with a background in administration. Strongly passionate about web development, user interfaces, and digital technology. I have completed various intensive courses and personal projects using HTML, CSS, JavaScript, and frameworks such as Bootstrap and React. Skilled in self-directed learning, collaborative teamwork, and maintaining strong attention to detail in creating engaging, responsive, and user-friendly web interfaces. Ready to make a meaningful contribution as a dedicated and enthusiastic Front-End Web Developer.</p>
+
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <p class="description">Currently pursuing a degree in Informatics Engineering at Universitas Indraprasta PGRI, I am a professional transitioning into Front-End Web Development with a background in administration. Strongly passionate about web development, user interfaces, and digital technology. I have completed various intensive courses and personal projects using HTML, CSS, JavaScript, and frameworks such as Bootstrap and React. Skilled in self-directed learning, collaborative teamwork, and maintaining strong attention to detail in creating engaging, responsive, and user-friendly web interfaces. Ready to make a meaningful contribution as a dedicated and enthusiastic Front-End Web Developer.</p>
         <div class="about-exp">
             <div class="about-exp-item">
                 <div class="about-exp-item-header">
@@ -42,7 +41,7 @@
                         <h5>Admin Project</h5>
                         <p>PT OHLALA INTERNATIONAL (Februari 2025 - September 2025)</p>
                     </div>
-                    <button class="btn button" onclick="toggleDetail(event)">More Info</button>
+                    <button class="button" onclick="toggleDetail(event)">More Info</button>
                 </div>
                     <p class="about-exp-item-detail">Responsible for preparing internal memos for purchasing and operational item repairs, as well as creating internal memos for cash advances. I arranged and managed project team meeting schedules, coordinated with vendors to support operational needs, and monitored outlet conditions in the field to ensure smooth and efficient operations.</p>
             </div>
@@ -52,7 +51,7 @@
                         <h5>Admin Monitoring Control</h5>
                         <p>PT Bintang Sukses Energi (Mei 2022 - Januari 2025)</p>
                     </div>
-                    <button class="btn button" onclick="toggleDetail(event)">More Info</button>
+                    <button class="button" onclick="toggleDetail(event)">More Info</button>
                 </div>
                     <p class="about-exp-item-detail">Responsible for preparing regular Gain & Loss production reports, daily fuel monitoring reports, and hourly production reports as a Dispatcher. I also conducted distance reconciliation with clients, prepared monthly production reports and official statements, and developed weekly Gain & Loss reports to support management meetings.</p>
             </div>
@@ -62,90 +61,82 @@
                         <h5>Admin Server & Dapodik</h5>
                         <p>SMK Muhammadiyah Sungailiat (Februari 2021 - Mei 2022)</p>
                     </div>
-                    <button class="btn button" onclick="toggleDetail(event)">More Info</button>
+                    <button class="button" onclick="toggleDetail(event)">More Info</button>
                 </div>
                     <p class="about-exp-item-detail">Responsible for managing student, teacher, and staff data in both the local database and the national Dapodik application. I handled the maintenance of all school computer devices, processed student E-Rapor data, and ensured proper maintenance of the school’s server and database systems.</p>
             </div>
         </div>
     </section>
-    <section id="work" class="work container">
-        <div class="work-text text-center mb-5">
-            <h2 class="fw-bold">Projects</h2>
-            <p>Here are some of my recent works</p>
+
+    <section id="project" class="project">
+        <div class="project-title">
+            <h2>Projects</h2>
+            <p class="project-title">Here are some of the projects I've worked on</p>
         </div>
-        <div class="work-cards d-flex flex-wrap justify-content-center gap-4">
-            <div class="card" style="width: 18rem;">
-                <img src="images/coder.png" class="card-img-top" alt="coder">
-                <div class="card-body">
-                    <h5 class="card-title">Coder</h5>
-                    <p class="card-text">A clean and responsive business landing page built with HTML, CSS, Bootstrap, and JavaScript.</p>
-                    <a href="https://shibasky.github.io/Kodio/" class="btn button">Show Project</a>
-                </div>
+        <div class="project-container">
+            <div class="project-item">
+                <img src="images/coder.png" alt="project 1">
+                <h3>Coder</h3>
+                <p class="project-description">A clean and responsive business landing page built with HTML, CSS, Bootstrap, and JavaScript.</p>
+                <a href="https://biancoakbar.github.io/" class="button">View Project</a>
             </div>
-
-            <div class="card" style="width: 18rem;">
-                <img src="images/kenangansenja.png" class="card-img-top" alt="kenangansenja">
-                <div class="card-body">
-                    <h5 class="card-title">Kenangan Senja</h5>
-                    <p class="card-text">A modern and responsive coffee landing page built with HTML, Tailwind CSS, JavaScript, and AlpineJS.</p>
-                    <a href="https://shibasky.github.io/" class="btn button">Show Project</a>
-                </div>
+            <div class="project-item">
+                <img src="images/todo-list.png" alt="project 2">
+                <h3>Todo List</h3>
+                <p class="project-description">A simple and interactive To-Do List application built with HTML, CSS, and JavaScript to manage daily tasks efficiently.</p>
+                <a href="https://shibasky.github.io/CodingCamp-30092025-biancoakbar/" class="button">View Project</a>
             </div>
-
-            <div class="card" style="width: 18rem;">
-                <img src="images/todo-list.png" class="card-img-top" alt="todo-list">
-                <div class="card-body">
-                    <h5 class="card-title">Todo List</h5>
-                    <p class="card-text">A simple and interactive To-Do List application built with HTML, CSS, and JavaScript to manage daily tasks efficiently.</p>
-                    <a href="https://shibasky.github.io/CodingCamp-30092025-biancoakbar/" class="btn button">Show Project</a>
-                </div>
+            <div class="project-item">
+                <img src="images/kenangansenja.png" alt="project 3">
+                <h3>Kenangan Senja</h3>
+                <p class="project-description">A modern and responsive coffee landing page built with HTML, Tailwind CSS, JavaScript, and AlpineJS.</p>
+                <a href="https://shibasky.github.io/" class="button">View Project</a>
             </div>
         </div>
     </section>
-    
-    <section id="contact" class="contact container">
-        <div class="row d-flex align-items-center gap-5">
-            <div class="col-12 col-lg-6">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, alias. Suscipit expedita aliquid magni neque corrupti adipisci minima laboriosam harum dolorum facilis consectetur possimus, mollitia unde reprehenderit sit cupiditate voluptates, eum commodi molestiae vero sequi saepe veniam. Possimus unde quasi accusantium reprehenderit rerum, earum ut molestiae? Facere, maiores ut. Iste!</p>
-                <div class="row">
-                    <div class="col d-flex align-items-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="50" width="48" viewBox="0 0 640 640"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="#74C0FC" d="M576 320C576 178.6 461.4 64 320 64C178.6 64 64 178.6 64 320C64 440 146.7 540.8 258.2 568.5L258.2 398.2L205.4 398.2L205.4 320L258.2 320L258.2 286.3C258.2 199.2 297.6 158.8 383.2 158.8C399.4 158.8 427.4 162 438.9 165.2L438.9 236C432.9 235.4 422.4 235 409.3 235C367.3 235 351.1 250.9 351.1 292.2L351.1 320L434.7 320L420.3 398.2L351 398.2L351 574.1C477.8 558.8 576 450.9 576 320z"/></svg>
-                        <p class="mb-0 ms-2">Bianco Akbar Firdhaus</p>
-                    </div>
-                    <div class="col d-flex align-items-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="50" width="48" viewBox="0 0 640 640"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="#ce97fc" d="M320.3 205C256.8 204.8 205.2 256.2 205 319.7C204.8 383.2 256.2 434.8 319.7 435C383.2 435.2 434.8 383.8 435 320.3C435.2 256.8 383.8 205.2 320.3 205zM319.7 245.4C360.9 245.2 394.4 278.5 394.6 319.7C394.8 360.9 361.5 394.4 320.3 394.6C279.1 394.8 245.6 361.5 245.4 320.3C245.2 279.1 278.5 245.6 319.7 245.4zM413.1 200.3C413.1 185.5 425.1 173.5 439.9 173.5C454.7 173.5 466.7 185.5 466.7 200.3C466.7 215.1 454.7 227.1 439.9 227.1C425.1 227.1 413.1 215.1 413.1 200.3zM542.8 227.5C541.1 191.6 532.9 159.8 506.6 133.6C480.4 107.4 448.6 99.2 412.7 97.4C375.7 95.3 264.8 95.3 227.8 97.4C192 99.1 160.2 107.3 133.9 133.5C107.6 159.7 99.5 191.5 97.7 227.4C95.6 264.4 95.6 375.3 97.7 412.3C99.4 448.2 107.6 480 133.9 506.2C160.2 532.4 191.9 540.6 227.8 542.4C264.8 544.5 375.7 544.5 412.7 542.4C448.6 540.7 480.4 532.5 506.6 506.2C532.8 480 541 448.2 542.8 412.3C544.9 375.3 544.9 264.5 542.8 227.5zM495 452C487.2 471.6 472.1 486.7 452.4 494.6C422.9 506.3 352.9 503.6 320.3 503.6C287.7 503.6 217.6 506.2 188.2 494.6C168.6 486.8 153.5 471.7 145.6 452C133.9 422.5 136.6 352.5 136.6 319.9C136.6 287.3 134 217.2 145.6 187.8C153.4 168.2 168.5 153.1 188.2 145.2C217.7 133.5 287.7 136.2 320.3 136.2C352.9 136.2 423 133.6 452.4 145.2C472 153 487.1 168.1 495 187.8C506.7 217.3 504 287.3 504 319.9C504 352.5 506.7 422.6 495 452z"/></svg>
-                        <p class="mb-0 ms-2">@___baycandoit</p>
-                    </div>
-                    <div class="col d-flex align-items-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="50" width="48" viewBox="0 0 448 512"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="#63E6BE" d="M380.9 97.1c-41.9-42-97.7-65.1-157-65.1-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480 117.7 449.1c32.4 17.7 68.9 27 106.1 27l.1 0c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3 18.6-68.1-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1s56.2 81.2 56.1 130.5c0 101.8-84.9 184.6-186.6 184.6zM325.1 300.5c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8s-14.3 18-17.6 21.8c-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7s-12.5-30.1-17.1-41.2c-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2s-9.7 1.4-14.8 6.9c-5.1 5.6-19.4 19-19.4 46.3s19.9 53.7 22.6 57.4c2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4s4.6-24.1 3.2-26.4c-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
-                        <p class="mb-0 ms-2">0851-9864-3208</p>
-                    </div>
-                </div>
+
+    <section id="contact" class="contact">
+        <h2>Contact</h2>
+        <p>If you have any questions or inquiries, feel free to reach out!</p>
+        <form class="contact-form">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="example@gmail.com" required>
             </div>
-            <div class="col-12 col-lg-5">
-                <form class="contact-form" onsubmit="onFormSubmit(event)">
-                <div class="mb-3">
-                    <label for="inp_email" class="form-label">Email address</label>
-                    <input type="email" class="form-control" id="inp_email" placeholder="example.@gmail.com">
+            <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" placeholder="Your Subject" required>
+            </div>
+            <div class="form-group">
+                <label for="massage">Massage</label>
+                <input type="text" id="massage" placeholder="Your Massage" required>
+            </div>
+            <button type="submit" class="button">Submit</button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <h3>Bianco Akbar Firdhaus</h3>
+                <p>A Frontend focused Web Developer building the Frontend of Websites and Web
+                    Applications that leads to the success of the overall product
+                </p>
+            </div>
+            <div class="footer-right">
+                <h3>Social</h3>
+                <div class="social-icons">
+                    <a href=""><svg xmlns="http://www.w3.org/2000/svg" height="32" width="28" viewBox="0 0 448 512"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="#63E6BE" d="M380.9 97.1c-41.9-42-97.7-65.1-157-65.1-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480 117.7 449.1c32.4 17.7 68.9 27 106.1 27l.1 0c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3 18.6-68.1-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1s56.2 81.2 56.1 130.5c0 101.8-84.9 184.6-186.6 184.6zM325.1 300.5c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8s-14.3 18-17.6 21.8c-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7s-12.5-30.1-17.1-41.2c-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2s-9.7 1.4-14.8 6.9c-5.1 5.6-19.4 19-19.4 46.3s19.9 53.7 22.6 57.4c2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4s4.6-24.1 3.2-26.4c-1.3-2.5-5-3.9-10.5-6.6z"/></svg></a>
+                    <a href=""><svg xmlns="http://www.w3.org/2000/svg" height="32" width="28" viewBox="0 0 448 512"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="#B197FC" d="M224.3 141a115 115 0 1 0 -.6 230 115 115 0 1 0 .6-230zm-.6 40.4a74.6 74.6 0 1 1 .6 149.2 74.6 74.6 0 1 1 -.6-149.2zm93.4-45.1a26.8 26.8 0 1 1 53.6 0 26.8 26.8 0 1 1 -53.6 0zm129.7 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM399 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg></a>
+                    <a href=""><svg xmlns="http://www.w3.org/2000/svg" height="32" width="32" viewBox="0 0 512 512"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="#74C0FC" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM252.8 8c-138.7 0-244.8 105.3-244.8 244 0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1 100-33.2 167.8-128.1 167.8-239 0-138.7-112.5-244-251.2-244zM105.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></a>
+                    <a href=""><svg xmlns="http://www.w3.org/2000/svg" height="32" width="32" viewBox="0 0 512 512"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="#74C0FC" d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5l0-170.3-52.8 0 0-78.2 52.8 0 0-33.7c0-87.1 39.4-127.5 125-127.5 16.2 0 44.2 3.2 55.7 6.4l0 70.8c-6-.6-16.5-1-29.6-1-42 0-58.2 15.9-58.2 57.2l0 27.8 83.6 0-14.4 78.2-69.3 0 0 175.9C413.8 494.8 512 386.9 512 256z"/></svg></a>
                 </div>
-                <div class="mb-3">
-                    <label for="inp_subject" class="form-label">Subject</label>
-                    <input type="text" class="form-control" id="inp_subject" placeholder="Your Subject">
-                </div>
-                <div class="mb-3">
-                    <label for="inp_message" class="form-label">Message</label>
-                    <input type="text" class="form-control" id="inp_message" placeholder="Your Massage">
-                </div>
-                <div class="d-flex justify-content-center mt-5">
-                    <button type="submit" class="btn button">Submit</button>
-                </div>
-                </form>
             </div>
         </div>
-    </section>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script src="main.js"></script>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Bianco Akbar Firdhaus. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
 </body>
 </html>
