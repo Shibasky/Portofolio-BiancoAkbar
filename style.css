@@ -74,6 +74,7 @@ nav a:hover {
 
 .home-container img {
     border-radius: 20px;
+    border: 4px solid #2563eb;
 }
 
 .home .col-4 img {
