@@ -1,3 +1,10 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+    color: #e0e0e0;
+    background: #0f172a;
+}
+
 section {
     padding-top: 128px;
     position: relative;
@@ -18,17 +25,43 @@ section::before {
 .btn.button {
     border: 3px solid black;
     border-radius: 24px;
+    background-color: #60a5fa;
 }
 
 .btn.button:hover, .btn.button.active {
     border: 3px solid black;
-    background-color: black;
+    background-color: #2563eb;
     color: white;
 }
 
-.navbar {
-    background-color: white;
-    box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.25);
+nav {
+    top: 0;
+    width: 100;
+    background: #0f172a;
+    backdrop-filter: blur(10px);
+    padding: 1.5rem 0;
+    box-shadow: 0 1px 3px rgba(255, 255, 255, 0.25);
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: #e0e0e0;
+    font-weight: 500;
+    transition: color 0.3s;
+    font-size: 20px;
+}
+
+nav a:hover {
+    color: #4da6ff;
 }
 
 .home h1 {
@@ -53,6 +86,7 @@ section::before {
 
 #arrow {
     animation: 2s upDown infinite;
+    filter: invert(1);
 }
 
 .about::before {
@@ -74,62 +108,31 @@ section::before {
 }
 
 .work::before {
-    content: 'Work';
+    content: 'Projects';
 }
 
-.work-img {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: "work-1 work-2" "work-3 work-3";
-    gap: 16px;
+.work-cards {
+    margin-top: 32px;
 }
 
-.work-img img {
-    width: 100%;
+.work-cards .card {
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.work-img-item {
-    position: relative;
+.work-cards .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.work-img-item:hover::after {
-    content: '';
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 500;
-    font-size: 24px;
-}
-
-#work-1 {
-    grid-area: work-1;
-}
-
-#work-1:hover::after {
-    content: 'Web Project';
-}
-
-#work-2 {
-    grid-area: work-2;
-}
-
-#work-2:hover::after {
-    content: 'Design Web';
-}
-
-#work-3 {
-    grid-area: work-3;
-}
-
-#work-3:hover::after {
-    content: 'Copy Writing';
+.work-cards .card img {
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    height: 200px;
+    object-fit: cover;
 }
 
 .contact::before {
